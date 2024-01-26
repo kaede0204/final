@@ -15,7 +15,7 @@
     }else if(empty($_POST['name'])){
         echo '商品名を入力してください。';
     }else if(empty($_POST['pason'])){
-        echo '作者を入力してください。';
+        echo '著者を入力してください。';
     }else if($sql->execute([ $_POST['id'], $_POST['name'], $_POST['pason']])){
         echo '<font color="red">追加に成功しました。</font>';
     }else{
@@ -24,7 +24,7 @@
 ?>
     <br><hr><br>
     <table>
-        <tr><th>商品番号</th><th>商品名</th><th>作者</th></tr>
+        <tr><th>商品番号</th><th>商品名</th><th>著者</th></tr>
 <?php
     foreach($pdo->query('select * from product') as $row){
         echo '<tr>';

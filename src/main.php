@@ -11,7 +11,7 @@
         <hr>
         <button onclick="location.href='input.php'">商品を登録する</button>
         <table>
-    <tr><th>商品番号</th><th>商品名</th><th>作者</th><th>更新</th><th>削除</th></tr>
+    <tr><th>商品番号</th><th>商品名</th><th>著者</th><th>更新</th><th>削除</th></tr>
 <?php
     $pdo=new PDO($connect, USER, PASS);
     foreach ($pdo->query('select * from product') as $row) {

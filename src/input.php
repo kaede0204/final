@@ -7,9 +7,9 @@
     <body>
         <p>商品を追加します</p>
         <form action="input-reselt.php" method="post">
-            商品番号<input type="text" name="id"><br>
+            
             商品名<input type="text" name="name"><br>
-            作者<input type="text" name="price"><br>
+            著者<input type="text" name="pason"><br>
             <button type="submit">追加</button>
         </form>
     </body>
