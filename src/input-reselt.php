@@ -9,10 +9,8 @@
 <body>
 <?php
     $pdo=new PDO($connect, USER, PASS);
-    $sql=$pdo->prepare('insert into product(id, name, pason) values (?, ?, ?)');
-    if(!preg_match('/^\d+$/',$_POST['id'])){
-        echo '商品番号を整数で入力してください。';
-    }else if(empty($_POST['name'])){
+    $sql=$pdo->prepare('insert into product(name, pason) values (?, ?)');
+    if(empty($_POST['name'])){
         echo '商品名を入力してください。';
     }else if(empty($_POST['pason'])){
         echo '著者を入力してください。';
